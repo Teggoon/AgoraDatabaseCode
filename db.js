@@ -11,11 +11,14 @@ const firebase = require("firebase");
     measurementId: "G-SS09EBWP13"
 });*/
 const db = firebase.initializeApp({
-apikey: "AIzaSyB-4QRn4XGp2EVTcRxrDX8hf0VQ9jiu-GQ",
-  authDomain: "agora.bid",
-  databaseURL: "https://agora.bid/",
-  projectId: "agora-36616",
-  storageBucket: ""
+	apiKey: "AIzaSyB-4QRn4XGp2EVTcRxrDX8hf0VQ9jiu-GQ",
+	authDomain: "agora-36616.firebaseapp.com",
+	databaseURL: "https://agora-36616.firebaseio.com",
+	projectId: "agora-36616",
+	storageBucket: "agora-36616.appspot.com",
+	messagingSenderId: "390346518142",
+	appId: "1:390346518142:web:68431d3a2b7aa01fd1722f",
+	measurementId: "G-FMZJY39827"
 });
 
 module.exports = db;

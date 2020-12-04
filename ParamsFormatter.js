@@ -56,7 +56,7 @@ class paramsFormatter {
         return "?symbol=" + baseCurrency.toLowerCase() + "_" + quoteCurrency.toLowerCase();
     }
     static formatBITFLYER(baseCurrency, quoteCurrency){
-        return "?" + baseCurrency + "_" + quoteCurrency;
+        return "?product_code=" + baseCurrency + "_" + quoteCurrency;
     }
     static formatBITHUMB(baseCurrency, quoteCurrency){
         return "/spot/orderBook?symbol=" + baseCurrency + "-"

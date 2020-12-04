@@ -23,8 +23,8 @@ class ParseFunctions {
 
             const newTradeObject =
                 {
-                    price: price,
-                    size: size
+                    price: parseInt(price),
+                    size: parseInt(size)
                 };
 
             arrayOfParsedBids.push(newTradeObject);
@@ -38,8 +38,8 @@ class ParseFunctions {
 
             const newTradeObject =
                 {
-                    price: price,
-                    size: size,
+                    price: parseInt(price),
+                    size: parseInt(size)
                 };
 
             arrayOfParsedAsks.push(newTradeObject);
@@ -85,8 +85,8 @@ class ParseFunctions {
 
             const newTradeObject =
                 {
-                    price: price,
-                    size: size
+                    price: parseInt(price),
+                    size: parseInt(size)
                 };
 
             arrayOfParsedBids.push(newTradeObject);
@@ -100,8 +100,8 @@ class ParseFunctions {
 
             const newTradeObject =
                 {
-                    price: price,
-                    size: size,
+                    price: parseInt(price),
+                    size: parseInt(size)
                 };
 
             arrayOfParsedAsks.push(newTradeObject);

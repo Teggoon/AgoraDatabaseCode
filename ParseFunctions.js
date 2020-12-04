@@ -264,8 +264,8 @@ class ParseFunctions {
 
     static parseBitstamp(unparsedObject) {
 
-        const bidsArray = unparsedObject["bids"].slice(0,100);
-        const asksArray = unparsedObject["asks"].slice(0,100);
+        const bidsArray = unparsedObject["bids"];
+        const asksArray = unparsedObject["asks"];
 
         let arrayOfParsedBids = [];
         let arrayOfParsedAsks = [];
@@ -516,9 +516,8 @@ class ParseFunctions {
 
 
     static parseBit_Z(unparsedObject) {
-        const bidsArray = unparsedObject["data"]["bids"].slice(0,100);
+        const bidsArray = unparsedObject["data"]["bids"];
         let tempAsksArray = unparsedObject["data"]["asks"];
-        tempAsksArray = tempAsksArray.slice(tempAsksArray.length-100, tempAsksArray.length);
         const asksArray = tempAsksArray.reverse();
 
         let arrayOfParsedBids = [];

@@ -1,13 +1,13 @@
 class paramsFormatter {
     /** DANIEL WORKSPACE START*/
     static formatCoinbase (baseCurrency, quoteCurrency) {
-        return "/products/" + baseCurrency + "-" + quoteCurrency + "/book?level=2";
+        return "/products/" + baseCurrency + "-" + quoteCurrency + "/book?level=3";
     }
     static formatBitfinex (baseCurrency, quoteCurrency) {
         return "/book/t" + baseCurrency + quoteCurrency + "/P1?len=100";
     }
     static formatCex_io (baseCurrency, quoteCurrency) {
-        return "/" + baseCurrency + "/"+ quoteCurrency + "/?depth=50";
+        return "/" + baseCurrency + "/"+ quoteCurrency + "/";
     }
     static formatPoloniex (baseCurrency, quoteCurrency) {
         return "?command=returnOrderBook&currencyPair=" + quoteCurrency + "_"+ baseCurrency + "";
@@ -20,13 +20,13 @@ class paramsFormatter {
         return "/" + baseCurrency + quoteCurrency ;
     }
     static formatOKCoin (baseCurrency, quoteCurrency) {
-        return "/" + baseCurrency + "-" + quoteCurrency + "/book?size=50";
+        return "/" + baseCurrency + "-" + quoteCurrency + "/book?size=200";
     }
     static formatBinance (baseCurrency, quoteCurrency) {
         return "/api/v3/depth?symbol=" + baseCurrency + quoteCurrency;
     }
     static formatFTX (baseCurrency, quoteCurrency) {
-        return "/markets/" + baseCurrency + "/" + quoteCurrency + "/orderbook?depth=50";
+        return "/markets/" + baseCurrency + "/" + quoteCurrency + "/orderbook?depth=100";
     }
     static formatBitmex(baseCurrency, quoteCurrency) {
         let convertedQuoteCurrency = quoteCurrency;

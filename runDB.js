@@ -7,8 +7,8 @@ const EXCHANGEINFOS = require("./ExchangeInfos.js");
 
 
 const CORSHELPERURL = "https://cors-anywhere.herokuapp.com";
-const WAITTIME = 150;
-const WAITTIME2 = 10000;
+const WAITTIME = 300;
+const WAITTIME2 = 20000;
 
 const firebaseRef = db.database().ref("TRADES");
 
@@ -107,7 +107,7 @@ async function dGeneralFetchFromAPI (exchange, formatterFunction, parserFunction
             let parsedBidsArray = parsedObjects.bids;
             let parsedAsksArray = parsedObjects.asks;
 
-
+            //console.log(parsedBidsArray);
 
             pushToDB(firebaseRef, parsedBidsArray,"bids",exchangeName, baseCurrency, quoteCurrency);
             pushToDB(firebaseRef, parsedAsksArray,"asks",exchangeName, baseCurrency, quoteCurrency);
@@ -152,14 +152,16 @@ async function dSpecialFetchFromLiquid(idbound) {
 async function APIController() {
 
 
-  dGeneralFetchFromAPI(EXCHANGEINFOS.GEMINI, paramsFormatter.formatGemini, ParseFunctions.parseGemini, 20, 20);
-  dGeneralFetchFromAPI(EXCHANGEINFOS.COINBASE, paramsFormatter.formatCoinbase, ParseFunctions.parseCoinbase,20,20);
-  dGeneralFetchFromAPI(EXCHANGEINFOS.BITFINEX, paramsFormatter.formatBitfinex, ParseFunctions.parseBitfinex,20,20);
-  dGeneralFetchFromAPI(EXCHANGEINFOS.CEX_IO, paramsFormatter.formatCex_io, ParseFunctions.parseCoinbase, 20, 20);
-  dGeneralFetchFromAPI(EXCHANGEINFOS.GATE_IO, paramsFormatter.formatGate_io, ParseFunctions.parseGate_io, 20, 20);
-  dGeneralFetchFromAPI(EXCHANGEINFOS.OKCOIN, paramsFormatter.formatOKCoin, ParseFunctions.parseGate_io, 20, 20);
-  dGeneralFetchFromAPI(EXCHANGEINFOS.BINANCE, paramsFormatter.formatBinance, ParseFunctions.parseGate_io, 20, 20);
+
   dGeneralFetchFromAPI(EXCHANGEINFOS.FTX, paramsFormatter.formatFTX, ParseFunctions.parseFTX, 20, 20);
+
+  dGeneralFetchFromAPI(EXCHANGEINFOS.GEMINI, paramsFormatter.formatGemini, ParseFunctions.parseGemini, 20, 20);
+  dGeneralFetchFromAPI(EXCHANGEINFOS.BITFINEX, paramsFormatter.formatBitfinex, ParseFunctions.parseBitfinex,20,20);
+  dGeneralFetchFromAPI(EXCHANGEINFOS.GATE_IO, paramsFormatter.formatGate_io, ParseFunctions.parseGate_io, 20, 20);
+  dGeneralFetchFromAPI(EXCHANGEINFOS.BINANCE, paramsFormatter.formatBinance, ParseFunctions.parseGate_io, 20, 20);
+  dGeneralFetchFromAPI(EXCHANGEINFOS.COINBASE, paramsFormatter.formatCoinbase, ParseFunctions.parseCoinbase,20,20);
+  dGeneralFetchFromAPI(EXCHANGEINFOS.CEX_IO, paramsFormatter.formatCex_io, ParseFunctions.parseCoinbase, 20, 20);
+  dGeneralFetchFromAPI(EXCHANGEINFOS.OKCOIN, paramsFormatter.formatOKCoin, ParseFunctions.parseGate_io, 20, 20);
 
   await sleep(WAITTIME2);
 

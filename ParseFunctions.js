@@ -17,14 +17,14 @@ class ParseFunctions {
 
         // Go ahead and parse the bids data
         for (let i = 0; i < bidsArray.length; i++){
-            const price = bidsArray[i][0];
-            const size = bidsArray[i][1];
+            const price = parseFloat(bidsArray[i][0]);
+            const size = parseFloat(bidsArray[i][1]);
             const num_of_order = "N/A";
 
             const newTradeObject =
                 {
-                    price: parseFloat(price),
-                    size: parseFloat(size)
+                    price: price,
+                    size: size
                 };
 
             arrayOfParsedBids.push(newTradeObject);
@@ -32,14 +32,14 @@ class ParseFunctions {
 
         // Go ahead and parse the asks data
         for (let i = 0; i < asksArray.length; i++) {
-            const price = asksArray[i][0];
-            const size = asksArray[i][1];
+            const price = parseFloat(asksArray[i][0]);
+            const size = parseFloat(asksArray[i][1]);
             const num_of_order = "N/A";
 
             const newTradeObject =
                 {
-                    price: parseFloat(price),
-                    size: parseFloat(size)
+                    price: price,
+                    size: size
                 };
 
             arrayOfParsedAsks.push(newTradeObject);
@@ -80,13 +80,13 @@ class ParseFunctions {
 
         // Go ahead and parse the bids data
         for (let i = 0; i < bidsArray.length; i++){
-            const price = bidsArray[i].price;
-            const size = bidsArray[i].size;
+            const price = parseFloat(bidsArray[i].price);
+            const size = parseFloat(bidsArray[i].size);
 
             const newTradeObject =
                 {
-                    price: parseFloat(price),
-                    size: parseFloat(size)
+                    price: price,
+                    size: size
                 };
 
             arrayOfParsedBids.push(newTradeObject);
@@ -94,14 +94,14 @@ class ParseFunctions {
 
         // Go ahead and parse the asks data
         for (let i = 0; i < asksArray.length; i++) {
-            const price = asksArray[i].price;
-            const size = asksArray[i].size;
+            const price = parseFloat(asksArray[i].price);
+            const size = parseFloat(asksArray[i].size);
             const num_of_order = "N/A";
 
             const newTradeObject =
                 {
-                    price: parseFloat(price),
-                    size: parseFloat(size)
+                    price: price,
+                    size: size
                 };
 
             arrayOfParsedAsks.push(newTradeObject);

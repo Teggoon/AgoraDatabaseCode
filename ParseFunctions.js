@@ -19,7 +19,6 @@ class ParseFunctions {
         for (let i = 0; i < bidsArray.length; i++){
             const price = parseFloat(bidsArray[i][0]);
             const size = parseFloat(bidsArray[i][1]);
-            const num_of_order = "N/A";
 
             const newTradeObject =
                 {
@@ -34,7 +33,6 @@ class ParseFunctions {
         for (let i = 0; i < asksArray.length; i++) {
             const price = parseFloat(asksArray[i][0]);
             const size = parseFloat(asksArray[i][1]);
-            const num_of_order = "N/A";
 
             const newTradeObject =
                 {
@@ -96,7 +94,6 @@ class ParseFunctions {
         for (let i = 0; i < asksArray.length; i++) {
             const price = parseFloat(asksArray[i].price);
             const size = parseFloat(asksArray[i].size);
-            const num_of_order = "N/A";
 
             const newTradeObject =
                 {
@@ -264,8 +261,8 @@ class ParseFunctions {
 
     static parseBitstamp(unparsedObject) {
 
-        const bidsArray = unparsedObject["bids"];
-        const asksArray = unparsedObject["asks"];
+        const bidsArray = unparsedObject["bids"].slice(0,300);
+        const asksArray = unparsedObject["asks"].slice(0,300);
 
         let arrayOfParsedBids = [];
         let arrayOfParsedAsks = [];
@@ -474,8 +471,8 @@ class ParseFunctions {
 
     static parseCoinbase(unparsedObject) {
 
-        const bidsArray = unparsedObject["bids"];
-        const asksArray = unparsedObject["asks"];
+        const bidsArray = unparsedObject["bids"].slice(0,300);
+        const asksArray = unparsedObject["asks"].slice(0,300);
 
         let arrayOfParsedBids = [];
         let arrayOfParsedAsks = [];

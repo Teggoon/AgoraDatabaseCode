@@ -8,7 +8,7 @@ const EXCHANGEINFOS = require("./ExchangeInfos.js");
 
 const CORSHELPERURL = "https://cors-anywhere.herokuapp.com";
 const WAITTIME = 300;
-const WAITTIME2 = 20000;
+const WAITTIME2 = 10000;
 
 const firebaseRef = db.database().ref("TRADES");
 
@@ -156,10 +156,13 @@ async function APIController() {
   dGeneralFetchFromAPI(EXCHANGEINFOS.FTX, paramsFormatter.formatFTX, ParseFunctions.parseFTX, 20, 20);
 
   dGeneralFetchFromAPI(EXCHANGEINFOS.GEMINI, paramsFormatter.formatGemini, ParseFunctions.parseGemini, 20, 20);
+    await sleep(WAITTIME2);
   dGeneralFetchFromAPI(EXCHANGEINFOS.BITFINEX, paramsFormatter.formatBitfinex, ParseFunctions.parseBitfinex,20,20);
   dGeneralFetchFromAPI(EXCHANGEINFOS.GATE_IO, paramsFormatter.formatGate_io, ParseFunctions.parseGate_io, 20, 20);
+    await sleep(WAITTIME2);
   dGeneralFetchFromAPI(EXCHANGEINFOS.BINANCE, paramsFormatter.formatBinance, ParseFunctions.parseGate_io, 20, 20);
   dGeneralFetchFromAPI(EXCHANGEINFOS.COINBASE, paramsFormatter.formatCoinbase, ParseFunctions.parseCoinbase,20,20);
+    await sleep(WAITTIME2);
   dGeneralFetchFromAPI(EXCHANGEINFOS.CEX_IO, paramsFormatter.formatCex_io, ParseFunctions.parseCoinbase, 20, 20);
   dGeneralFetchFromAPI(EXCHANGEINFOS.OKCOIN, paramsFormatter.formatOKCoin, ParseFunctions.parseGate_io, 20, 20);
 
@@ -167,15 +170,19 @@ async function APIController() {
 
   dGeneralFetchFromAPI(EXCHANGEINFOS.BITSTAMP, paramsFormatter.formatBitstamp, ParseFunctions.parseBitstamp, 20, 20);
   dGeneralFetchFromAPI(EXCHANGEINFOS.POLONIEX, paramsFormatter.formatPoloniex, ParseFunctions.parseGate_io, 20, 20);
+    await sleep(WAITTIME2);
   dGeneralFetchFromAPI(EXCHANGEINFOS.BITTREX, paramsFormatter.formatBittrex, ParseFunctions.parseBittrex, 20, 20);
   dGeneralFetchFromAPI(EXCHANGEINFOS.BITZ, paramsFormatter.formatBIT_Z, ParseFunctions.parseBit_Z, 20, 20)
   dSpecialFetchFromLiquid(20);
+    await sleep(WAITTIME2);
 
 
   jGeneralFetchFromAPI(EXCHANGEINFOS.KRAKEN, paramsFormatter.formatKRAKEN, ParseFunctions.parseKRAKEN, 20, 20);
   jGeneralFetchFromAPI(EXCHANGEINFOS.HITBTC, paramsFormatter.formatHITBTC, ParseFunctions.parseHITBTC, 20, 20);
+    await sleep(WAITTIME2);
   jGeneralFetchFromAPI(EXCHANGEINFOS.CROSSTOWER, paramsFormatter.formatCROSSTOWER, ParseFunctions.parseCROSSTOWER, 20, 20);
   jGeneralFetchFromAPI(EXCHANGEINFOS.BITFLYER, paramsFormatter.formatBITFLYER, ParseFunctions.parseBITFLYER, 20, 20);
+    await sleep(WAITTIME2);
   jGeneralFetchFromAPI(EXCHANGEINFOS.BITHUMB, paramsFormatter.formatBITHUMB, ParseFunctions.parseBITHUMB, 20, 20);
   jGeneralFetchFromAPI(EXCHANGEINFOS.BITBAY, paramsFormatter.formatBITBAY, ParseFunctions.parseBITBAY, 20, 20);
 

@@ -10,7 +10,8 @@ const CORSHELPERURL = "https://cors-anywhere.herokuapp.com";
 const WAITTIME = 300;
 const WAITTIME2 = 10000;
 
-const firebaseRef = db.database().ref("TRADES");
+const firstFirebase = true;
+let firebaseRef = db.database().ref("TRADES");
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -193,4 +194,22 @@ function pullFromAPI() {
     APIController();
 }
 
-pullFromAPI();
+function updateIfOclock(){
+    var now = new Date();
+    if(now.getUTCMinutes() == 0){
+        console.log("Wake up database, it's feeding time. " + now.getUTCHours());
+        if(now.getUTCHours() % 2 == 0){
+            console.log("Even hour. Use backup database Trades1");
+            firebaseRef = db.database().ref("TRADES");
+        }else{
+            console.log("Odd hour. Use backup database Trades");
+            firebaseRef = db.database().ref("TRADES1");
+        }
+        pullFromAPI();
+    }else{
+        console.log("Sleep tight database. Time = " + now.getUTCHours() + ":" + now.getUTCMinutes());
+    }
+}
+
+console.log("Timer database running");
+setInterval(updateIfOclock, 60000);

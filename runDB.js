@@ -153,31 +153,31 @@ async function APIController() {
 
 
 
-  dGeneralFetchFromAPI(EXCHANGEINFOS.FTX, paramsFormatter.formatFTX, ParseFunctions.parseFTX, 20, 20).then(
+  dGeneralFetchFromAPI(EXCHANGEINFOS.FTX, paramsFormatter.formatFTX, ParseFunctions.parseFTX, 20, 20);
 
-  dGeneralFetchFromAPI(EXCHANGEINFOS.GEMINI, paramsFormatter.formatGemini, ParseFunctions.parseGemini, 20, 20)).then(
-  dGeneralFetchFromAPI(EXCHANGEINFOS.BITFINEX, paramsFormatter.formatBitfinex, ParseFunctions.parseBitfinex,20,20)).then(
-  dGeneralFetchFromAPI(EXCHANGEINFOS.GATE_IO, paramsFormatter.formatGate_io, ParseFunctions.parseGate_io, 20, 20)).then(
-  dGeneralFetchFromAPI(EXCHANGEINFOS.BINANCE, paramsFormatter.formatBinance, ParseFunctions.parseGate_io, 20, 20)).then(
-  dGeneralFetchFromAPI(EXCHANGEINFOS.COINBASE, paramsFormatter.formatCoinbase, ParseFunctions.parseCoinbase,20,20)).then(
-  dGeneralFetchFromAPI(EXCHANGEINFOS.CEX_IO, paramsFormatter.formatCex_io, ParseFunctions.parseCoinbase, 20, 20)).then(
-  dGeneralFetchFromAPI(EXCHANGEINFOS.OKCOIN, paramsFormatter.formatOKCoin, ParseFunctions.parseGate_io, 20, 20)).then(
+  dGeneralFetchFromAPI(EXCHANGEINFOS.GEMINI, paramsFormatter.formatGemini, ParseFunctions.parseGemini, 20, 20);
+  dGeneralFetchFromAPI(EXCHANGEINFOS.BITFINEX, paramsFormatter.formatBitfinex, ParseFunctions.parseBitfinex,20,20);
+  dGeneralFetchFromAPI(EXCHANGEINFOS.GATE_IO, paramsFormatter.formatGate_io, ParseFunctions.parseGate_io, 20, 20);
+  dGeneralFetchFromAPI(EXCHANGEINFOS.BINANCE, paramsFormatter.formatBinance, ParseFunctions.parseGate_io, 20, 20);
+  dGeneralFetchFromAPI(EXCHANGEINFOS.COINBASE, paramsFormatter.formatCoinbase, ParseFunctions.parseCoinbase,20,20);
+  dGeneralFetchFromAPI(EXCHANGEINFOS.CEX_IO, paramsFormatter.formatCex_io, ParseFunctions.parseCoinbase, 20, 20);
+  dGeneralFetchFromAPI(EXCHANGEINFOS.OKCOIN, paramsFormatter.formatOKCoin, ParseFunctions.parseGate_io, 20, 20);
 
-  //await sleep(WAITTIME2)).then(
+  await sleep(WAITTIME2);
 
-  dGeneralFetchFromAPI(EXCHANGEINFOS.BITSTAMP, paramsFormatter.formatBitstamp, ParseFunctions.parseBitstamp, 20, 20)).then(
-  dGeneralFetchFromAPI(EXCHANGEINFOS.POLONIEX, paramsFormatter.formatPoloniex, ParseFunctions.parseGate_io, 20, 20)).then(
-  dGeneralFetchFromAPI(EXCHANGEINFOS.BITTREX, paramsFormatter.formatBittrex, ParseFunctions.parseBittrex, 20, 20)).then(
-  dGeneralFetchFromAPI(EXCHANGEINFOS.BITZ, paramsFormatter.formatBIT_Z, ParseFunctions.parseBit_Z, 20, 20)).then(
-  dSpecialFetchFromLiquid(20)).then(
+  dGeneralFetchFromAPI(EXCHANGEINFOS.BITSTAMP, paramsFormatter.formatBitstamp, ParseFunctions.parseBitstamp, 20, 20);
+  dGeneralFetchFromAPI(EXCHANGEINFOS.POLONIEX, paramsFormatter.formatPoloniex, ParseFunctions.parseGate_io, 20, 20);
+  dGeneralFetchFromAPI(EXCHANGEINFOS.BITTREX, paramsFormatter.formatBittrex, ParseFunctions.parseBittrex, 20, 20);
+  dGeneralFetchFromAPI(EXCHANGEINFOS.BITZ, paramsFormatter.formatBIT_Z, ParseFunctions.parseBit_Z, 20, 20)
+  dSpecialFetchFromLiquid(20);
 
 
-  jGeneralFetchFromAPI(EXCHANGEINFOS.KRAKEN, paramsFormatter.formatKRAKEN, ParseFunctions.parseKRAKEN, 20, 20)).then(
-  jGeneralFetchFromAPI(EXCHANGEINFOS.HITBTC, paramsFormatter.formatHITBTC, ParseFunctions.parseHITBTC, 20, 20)).then(
-  jGeneralFetchFromAPI(EXCHANGEINFOS.CROSSTOWER, paramsFormatter.formatCROSSTOWER, ParseFunctions.parseCROSSTOWER, 20, 20)).then(
-  jGeneralFetchFromAPI(EXCHANGEINFOS.BITFLYER, paramsFormatter.formatBITFLYER, ParseFunctions.parseBITFLYER, 20, 20)).then(
-  jGeneralFetchFromAPI(EXCHANGEINFOS.BITHUMB, paramsFormatter.formatBITHUMB, ParseFunctions.parseBITHUMB, 20, 20)).then(
-  jGeneralFetchFromAPI(EXCHANGEINFOS.BITBAY, paramsFormatter.formatBITBAY, ParseFunctions.parseBITBAY, 20, 20));
+  jGeneralFetchFromAPI(EXCHANGEINFOS.KRAKEN, paramsFormatter.formatKRAKEN, ParseFunctions.parseKRAKEN, 20, 20);
+  jGeneralFetchFromAPI(EXCHANGEINFOS.HITBTC, paramsFormatter.formatHITBTC, ParseFunctions.parseHITBTC, 20, 20);
+  jGeneralFetchFromAPI(EXCHANGEINFOS.CROSSTOWER, paramsFormatter.formatCROSSTOWER, ParseFunctions.parseCROSSTOWER, 20, 20);
+  jGeneralFetchFromAPI(EXCHANGEINFOS.BITFLYER, paramsFormatter.formatBITFLYER, ParseFunctions.parseBITFLYER, 20, 20);
+  jGeneralFetchFromAPI(EXCHANGEINFOS.BITHUMB, paramsFormatter.formatBITHUMB, ParseFunctions.parseBITHUMB, 20, 20);
+  jGeneralFetchFromAPI(EXCHANGEINFOS.BITBAY, paramsFormatter.formatBITBAY, ParseFunctions.parseBITBAY, 20, 20);
 
 }
 

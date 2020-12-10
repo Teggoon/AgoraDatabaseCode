@@ -1,5 +1,6 @@
 const fetch = require("node-fetch");
 const db = require("./db.js");
+const updateDBTimestamp = require("./updateDBTimestamp.js");
 const paramsFormatter = require("./ParamsFormatter.js").paramsFormatter;
 const ParseFunctions = require("./ParseFunctions.js").ParseFunctions;
 const pushToDB = require("./pushToDB.js");
@@ -206,6 +207,7 @@ function updateIfOclock(){
             firebaseRef = db.database().ref("TRADES1");
         }
         pullFromAPI();
+        updateDBTimestamp();
     }else{
         console.log("Sleep tight database. Time = " + now.getUTCHours() + ":" + now.getUTCMinutes());
     }

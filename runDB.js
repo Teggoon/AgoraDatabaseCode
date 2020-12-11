@@ -29,7 +29,7 @@ async function jGeneralFetchFromAPI (exchange, formatterFunction, parserFunction
       const pathParams = formatterFunction(baseCurrency, quoteCurrency);
       let queryURL = exchange.api_url + pathParams;
 
-      console.log(queryURL);
+      //console.log(queryURL);
       fetch(queryURL, {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' }
@@ -81,7 +81,7 @@ async function dGeneralFetchFromAPI (exchange, formatterFunction, parserFunction
           queryURL = exchange.api_url + pathParams;
       }
 
-      console.log(queryURL);
+      //console.log(queryURL);
       fetch(queryURL, {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' }
@@ -207,7 +207,6 @@ function updateIfOclock(){
             firebaseRef = db.database().ref("TRADES1");
         }
         pullFromAPI();
-        updateDBTimestamp();
     }else{
         console.log("Sleep tight database. Time = " + now.getUTCHours() + ":" + now.getUTCMinutes());
     }
